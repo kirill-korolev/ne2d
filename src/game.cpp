@@ -1,5 +1,4 @@
 #include "game.hpp"
-#include "exception.hpp"
 #include "input.hpp"
 
 namespace ne {

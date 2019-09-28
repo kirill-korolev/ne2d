@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "input.hpp"
 #include "game.hpp"
 
 using namespace ne;
@@ -90,8 +91,8 @@ int main() {
     try {
 
         Game::instance().init("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, 0,
-        [](StateMachine* sm){
-            sm->pushState(new PlayState);
+        [](StateMachine& sm){
+            sm.pushState(new PlayState);
         });
 
         const int FPS = 60;
